@@ -1,6 +1,10 @@
 # Ajax tutorial 
 
 http://www.kaidez.com/ajax-tutorial/
+  - Alternatives
+    - https://webdesign.tutsplus.com/tutorials/how-to-use-jquerys-ajax-function--cms-25774
+    - http://www.tutorialsteacher.com/jquery/jquery-ajax-introduction
+    
 
 ## Must read 
 The seminal article introducing AJAX by Jesse James Garrett, titled <em>A New Approach to Web Applications</em>

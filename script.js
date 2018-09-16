@@ -39,7 +39,7 @@ $.ajax({
     }
   }
 }).done(function(data) {
-  $("#textTarget").html(data);
+  $("#textTargetFile").html(data);
 });
 
 function isLoaded() {
