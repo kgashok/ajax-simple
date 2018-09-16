@@ -26,3 +26,22 @@ console.log('hi');
       }
     }
 })();
+
+
+// From Section 6 - Ajax and jQuery 
+
+$.ajax({
+  url: "articleName.html",
+  success: isLoaded,
+  statusCode: {
+    200: function() {
+      console.log("Everything is loaded!!!");
+    }
+  }
+}).done(function(data) {
+  $("#textTarget").html(data);
+});
+
+function isLoaded() {
+  $("#isLoadedTarget").html("The articleName.html file has loaded...check the console for a message returned by the statusCode property!!!");
+}

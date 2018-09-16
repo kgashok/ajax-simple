@@ -14,5 +14,5 @@ The seminal article introducing AJAX by Jesse James Garrett, titled <em>A New Ap
 - how to resolve 
   [404 error](https://www.lifewire.com/404-not-found-error-explained-2622936)
   
-
+- proceeding to section 6 on [Ajax and jQuery](http://www.kaidez.com/ajax-tutorial/#ajax-jquery)
   
