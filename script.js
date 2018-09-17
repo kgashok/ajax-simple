@@ -130,3 +130,11 @@ $.getJSON("soccerplayers.json", function(players) {
   })
 });
 
+
+// Script loading
+$.getScript("loadFile.js", function() {
+  getHtmlFile();
+  $("#scriptTarget").click(function(){
+    setText();
+  });
+});
