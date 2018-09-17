@@ -8,7 +8,7 @@ function getHtmlFile() {
 function setText() {
 
   $("#scriptTarget").css({
-    "color": "red",
+    "color": "darkorange",
     "font-weight": "bold"
   });
 

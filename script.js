@@ -93,13 +93,24 @@ $("#partialTextTarget").load("article.html #author");
 // Section 6.5
 // Using get
 /*
-Where we used .load as a chainable method inside a code block, .get started the code block in this example. The first parameter told us what content gets loaded onto the page, which is “articleName.html”.
+Where we used .load as a chainable method inside a code block, 
+.get started the code block in this example. The first 
+parameter told us what content gets loaded onto the page, 
+which is “articleName.html”.
 
-The second parameter was a callback function that defined where the content got loaded. The function took a parameter called “data” which represented the content that got loaded onto the page.
+The second parameter was a callback function that defined
+where the content got loaded. The function took a parameter
+called “data” which represented the content that got 
+loaded onto the page.
 
-The inside of the function loaded the content inside the “textTarget” page element with the help of jQuery’s .html method.
+The inside of the function loaded the content inside
+the “textTarget” page element with the help 
+of jQuery’s .html method.
 
-The “data” parameter (which represented the content) was passed to the .html method so the method knew what to load. The function parameter can be anything you want, but naming it “data” is a common practice.
+The “data” parameter (which represented the content) was 
+passed to the .html method so the method knew what to load. 
+The function parameter can be anything you want, 
+but naming it “data” is a common practice.
 */
 
 $.get("articleName.html", function(data) {

@@ -3,12 +3,6 @@
  - http://api.jquery.com/jQuery.get/ 
  - http://api.jquery.com/jQuery.getJSON/
 
-## Moving to Promises 
-
-  - https://gist.github.com/Domenic/3889970 (You're Missing the Point of Promises)
-  - https://www.promisejs.org/ - By Forbes Lindesay
-  
- 
  
 # Ajax tutorial 
 
