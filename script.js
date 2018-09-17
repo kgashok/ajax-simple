@@ -45,3 +45,10 @@ $.ajax({
 function isLoaded() {
   $("#isLoadedTarget").html("The articleName.html file has loaded...check the console for a message returned by the statusCode property!!!");
 }
+
+
+// .load: the easiest way to use AJAX with jQuery
+// sample11/scripts.js
+$("#getHTMLFile").click(function(){
+  $("#buttonTarget").load("articleName.html");
+});
