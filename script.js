@@ -106,8 +106,22 @@ $.get("articleName.html", function(data) {
   $("#getTextTarget").html(data);
 });
 
-
 // sample15/scripts.js
+/*
+  The first parameter for .getJSON was the JSON file with the  
+  content we wanted to load onto the page. The second parameter
+  was a callback function that loaded the data onto the page.
+
+  That callback function took one parameter we’ve called player,
+  which references the JSON file. Next, we used jQuery’s .each
+  method to do what the for...in loop did before: look for
+  properties in our JSON data.
+
+  .each also took parameters: the first one was players parameter,
+  which, again, pointed to our JSON data. The second parameter was
+  another callback function that loaded the data onto the page,
+  and inside particular page elements we created.
+*/
 $.getJSON("soccerplayers.json", function(players) {
   $.each(players, function(i) {
     var newDiv = $("<div></div>");

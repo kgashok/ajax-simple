@@ -1,6 +1,8 @@
 # Important Documentation 
  
  - http://api.jquery.com/jQuery.get/ 
+ - http://api.jquery.com/jQuery.getJSON/
+
  
  
 # Ajax tutorial 
