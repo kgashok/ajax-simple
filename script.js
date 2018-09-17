@@ -138,3 +138,4 @@ $.getScript("loadFile.js", function() {
     setText();
   });
 });
+
