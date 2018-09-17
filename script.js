@@ -85,3 +85,7 @@ document.getElementById("getHTMLFile").onclick = function() {
 document.getElementById("getTextFile").onclick = function() {
   loadFile("articleName.txt");
 };
+
+// Section 6.4 
+// Load in fragments with .load
+$("#partialTextTarget").load("article.html #author");
