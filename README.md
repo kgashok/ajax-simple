@@ -1,3 +1,8 @@
+# Important Documentation 
+ 
+ - http://api.jquery.com/jQuery.get/ 
+ 
+ 
 # Ajax tutorial 
 
 http://www.kaidez.com/ajax-tutorial/
