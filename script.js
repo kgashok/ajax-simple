@@ -129,3 +129,4 @@ $.getJSON("soccerplayers.json", function(players) {
     $("#jsonTextTarget").append(newDiv);
   })
 });
+
