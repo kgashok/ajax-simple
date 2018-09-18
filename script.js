@@ -155,7 +155,8 @@ $.getScript("loadFile.js", function() {
 // jsonTextTarget element 
 // .done part does the summary work 
 //
-$.getJSON("soccerplayers.json", function(players) {
+// added the .fail method
+$.getJSON("ladysoccer.json", function(players) {
   $.each(players, function(i) {
     var newDiv = $("<i><div></div></i>");
     $(newDiv).append(players[i].playerOne);
@@ -166,4 +167,10 @@ $.getJSON("soccerplayers.json", function(players) {
   console.log ("Done part reached!"); 
   var summary = "Player count " + Object.keys(data).length;
   $("#jsonTextTarget").append("<b><div id=summary>" + summary + "</div></b>");  
-});;
+}).fail(function(data) {
+  $("#jsonTextTarget").html("<b><i> The file did not load! </i></b>"); 
+});
+
+
+//The .fail method
+
