@@ -168,7 +168,9 @@ $.getJSON("ladysoccer.json", function(players) {
   var summary = "Player count " + Object.keys(data).length;
   $("#jsonTextTarget").append("<b><div id=summary>" + summary + "</div></b>");  
 }).fail(function(data) {
-  $("#jsonTextTarget").html("<b><i> The file did not load! </i></b>"); 
+  // simulate this by added another extra } to the end of the file
+  // at ladysoccer.json
+  $("#jsonTextTarget").append("<b><i> The file did not load! </i></b>"); 
 });
 
 
