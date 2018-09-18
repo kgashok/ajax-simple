@@ -176,5 +176,19 @@ $.getJSON("ladysoccer.json", function(players) {
 });
 
 
-//The .fail method
+// the final .then method
 
+$.getJSON("peoplesoccer.json").then(
+  function(data) {
+    $.each(data, function(i) {
+      var newDiv = $("<div></div>");
+      $(newDiv).append(data[i].playerOne);
+      $("#thenTarget").append(newDiv);
+    })
+  }, function(){
+    $("#thenTarget").html("The data failed to load.");
+  },
+  function(){
+      $("#thenTarget").html("The data is loading...");
+  }
+);
