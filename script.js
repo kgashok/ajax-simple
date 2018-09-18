@@ -139,7 +139,12 @@ $.getJSON("soccerplayers.json", function(players) {
     $(newDiv).append(players[i].playerOne);
     $("#jsonTextTarget").append(newDiv);
   })
-});
+}).done(function(data) { 
+  console.log ("Done part reached!"); 
+  var summary = "Player count " + Object.keys(data).length;
+  $("#jsonTextTarget").append("<div id=summary>" + summary + "</div>");
+  
+});;
 
 
 // Script loading
