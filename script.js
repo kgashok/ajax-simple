@@ -171,6 +171,8 @@ $.getJSON("ladysoccer.json", function(players) {
   // simulate this by added another extra } to the end of the file
   // at ladysoccer.json
   $("#jsonTextTarget").append("<b><i> The file did not load! </i></b>"); 
+}).always(function(data) { 
+  console.log("That is all, always!"); 
 });
 
 
