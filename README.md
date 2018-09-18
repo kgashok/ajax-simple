@@ -1,3 +1,11 @@
+# Promises - Research
+
+- JavaScript bookmarklet code to get URL of tab that was launched from current tab
+   - Using [Promises](http://j.mp/promiseJS)
+   - http://bit.ly/promiseIncremental
+   - http://j.mp/promiseIn16
+   - http://bit.ly/promiseBasics
+
 # Important Documentation 
  
  - http://api.jquery.com/jQuery.get/ 
@@ -26,5 +34,4 @@ The seminal article introducing AJAX by Jesse James Garrett, titled <em>A New Ap
   
 - proceeding to section 6 on [Ajax and jQuery](http://www.kaidez.com/ajax-tutorial/#ajax-jquery)
   
-- JavaScript bookmarklet code to get URL of tab that was launched from current tab
-   - Using [Promises](http://j.mp/promiseJS)
+
