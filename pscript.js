@@ -1,7 +1,26 @@
 //-----------------------------
 // https://javascript.info/promise-chaining
 //------------------------------
-  
+
+
+// Make a request for user.json
+fetch('/user.json')
+  // Load it as json
+  .then(response => response.json())
+  // Make a request to github
+  .then(user => fetch(`https://api.github.com/users/${user.name}`))
+  // Load the response as json
+  .then(response => response.json())
+  // Show the avatar image (githubUser.avatar_url) for 3 seconds (maybe animate it)
+  .then(githubUser => {
+    let img = document.createElement('img');
+    img.src = githubUser.avatar_url;
+    img.className = "promise-avatar-example";
+    document.body.append(img);
+    $('#textTarget').append(img);
+    setTimeout(() => img.remove(), 9000); // (*)
+  });
+
 var promise6 = new Promise(function(resolve, reject) {
 
   setTimeout(() => resolve(1), 1000);
