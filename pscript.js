@@ -1,7 +1,18 @@
 //-----------------------------
 // https://javascript.info/promise-chaining
 //------------------------------
+  
+var promise6 = new Promise(function(resolve, reject) {
 
+  setTimeout(() => resolve(1), 1000);
+
+}).then(function(result) {
+
+  alert(result);
+  return result * 2; // <-- (1)
+
+}) // <-- (2)
+// .then…
 
 
 
@@ -11,8 +22,6 @@
  *
  * --------------------------
  */
-
-
 // Using Promises for asynchronous code 
 // https://javascript.info/promise-basics#example-loadscript
 
