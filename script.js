@@ -93,6 +93,19 @@ $("#partialTextTarget").load("article.html #author");
 // Section 6.5
 // Using get
 /*
+
+    Use jQuery.get
+    The .get method is different from .load in a few
+    important ways:
+    .get is a global function while .load is a method. This 
+    means that you would use .get to start a jQuery code block 
+    but use .load as a chainable method inside a code block.
+    Because of the last difference, it makes sense to use .load 
+    to “AJAX in” HTML documents only. .get was created to “AJAX 
+    in” all types of documents.
+    .get manages GET server requests only while .load can manage
+    both GET and POST requests.
+
 Where we used .load as a chainable method inside a code block, 
 .get started the code block in this example. The first 
 parameter told us what content gets loaded onto the page, 
@@ -143,6 +156,7 @@ $.getJSON("soccerplayers.json", function(players) {
 
 
 // Script loading
+// Loading Scripts using Get function
 $.getScript("loadFile.js", function() {
   getHtmlFile();
   $("#scriptTarget").click(function(){
