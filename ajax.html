@@ -1,0 +1,94 @@
+<div>
+    <h1>
+      Ajax Tutorial
+    </h1>
+    <em>
+       From Section 5 of http://www.kaidez.com/ajax-tutorial
+    </em>
+    <br>
+    <h3>
+      <i>id = textTarget  </i>
+    </h3>
+    <div id="textTarget"></div>
+
+    <br>
+    <h3>
+      <i>id = targetFile  </i>
+    </h3>
+    <div id="textTargetFile"></div>
+    
+    <br>
+    <h3>
+      <i>id = isLoadedTarget  </i>
+    </h3>
+    <div id="isLoadedTarget"> </div>
+    
+    <br>
+    <button id="getHTMLFile0">Load the HTML file</button>
+    <h3>
+      <i>id = ButtonLoader  </i>
+    </h3>
+    <div id="buttonTarget"> </div>
+
+    <br>
+    <h3>
+      <i>id = Double ButtonLoader  </i>
+    </h3>
+    <button id="getHTMLFile">Load the HTML file</button>
+    <button id="getTextFile">Load the text file</button>
+    <div id="doubleButtonTarget"></div>
+    
+    <!--
+      Section 6.4 of the tutorial 
+    -->
+    <br>
+    <h3>
+      <i>id = PartialLoader </i>
+    </h3>
+    <div id ="partialTextTarget">       
+    </div>    
+    
+    <!--
+      Use jQuery.get
+      The .get method is different from .load in a few
+      important ways:
+
+      .get is a global function while .load is a method. This 
+      means that you would use .get to start a jQuery code block 
+      but use .load as a chainable method inside a code block.
+
+      Because of the last difference, it makes sense to use .load 
+      to “AJAX in” HTML documents only. .get was created to “AJAX 
+      in” all types of documents.
+
+      .get manages GET server requests only while .load can manage
+      both GET and POST requests.
+    -->    
+    <br>
+    <h3>
+      <i>id = Using Ajax GET </i>
+    </h3>
+    <div id ="getTextTarget"> </div>
+    
+    <br>
+    <h3>
+      <i>id = JSON Loader </i>
+    </h3>
+    <div id = "jsonTextTarget" > </div>
+    
+    <!--
+      Loading Scripts using Get function
+    -->
+    <br>
+    <h3>
+      <i>id = Script Loader (Click below on contents)  </i>
+    </h3>
+    <div id = "scriptTarget" > </div>
+
+    <br>
+    <h3>
+      <i>id = Then Method Loader </i>
+    </h3>
+    <div id = "thenTarget" > </div>
+
+</div>

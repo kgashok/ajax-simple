@@ -2,7 +2,6 @@
 function getHtmlFile() {
 
   $("#scriptTarget").load("articleName.html");
-
 };
 
 function setText() {
