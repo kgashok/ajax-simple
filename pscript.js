@@ -3,6 +3,26 @@
 //------------------------------
 
 
+fetch('/user.json')
+  .then(response => response.json())
+  .then(user => fetch(`https://api.github.com/users/${user.name}`))
+  .then(response => response.json())
+  .then(githubUser => new Promise(function(resolve, reject) {
+    let img = document.createElement('img');
+    img.src = githubUser.avatar_url;
+    img.className = "promise-avatar-example";
+    //document.body.append(img);
+    $('#textTarget').append(img);
+
+    setTimeout(() => {
+      img.remove();
+      resolve(githubUser);
+    }, 3000);
+  }))
+  // triggers after 3 seconds
+  .then(githubUser => alert(`Finished showing ${githubUser.name}`));
+
+/*
 // Make a request for user.json
 fetch('/user.json')
   // Load it as json
@@ -16,11 +36,14 @@ fetch('/user.json')
     let img = document.createElement('img');
     img.src = githubUser.avatar_url;
     img.className = "promise-avatar-example";
-    document.body.append(img);
+    //document.body.append(img);
     $('#textTarget').append(img);
-    setTimeout(() => img.remove(), 9000); // (*)
+    setTimeout(() => img.remove(), 4000); // (*)
   });
 
+*/
+
+/*
 var promise6 = new Promise(function(resolve, reject) {
 
   setTimeout(() => resolve(1), 1000);
@@ -32,7 +55,7 @@ var promise6 = new Promise(function(resolve, reject) {
 
 }) // <-- (2)
 // .then…
-
+*/
 
 
 /* ---------------------------
@@ -56,6 +79,7 @@ var promise6 = new Promise(function(resolve, reject) {
   }
   */
 
+/*
 function loadScript(src) {
   return new Promise(function(resolve, reject) {
     let script = document.createElement('script');
@@ -86,7 +110,7 @@ promise5.then(script => {
     setText();
   });
 });
-
+*/
 
 
 // ------------
