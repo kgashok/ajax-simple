@@ -1,6 +1,50 @@
 //-----------------------------
 // https://javascript.info/promise-chaining
 //------------------------------
+/*function loadJson(url) {
+  return fetch(url)
+    .then(response => response.json());
+}*/
+
+function loadJson(url) { // (2)
+  return fetch(url)
+    .then(response => {
+      if (response.status == 200) {
+        return response.json();
+      } else {
+        throw new HttpError(response);
+      }
+    })
+}
+
+
+class HttpError extends Error { // (1)
+  constructor(response) {
+    super(`${response.status} for ${response.url}`);
+    this.name = 'HttpError';
+    this.response = response;
+  }
+}
+
+function demoGithubUser() {
+  let name = prompt("Enter a name?", "iliakan");
+
+  return loadJson(`https://api.github.com/users/${name}`)
+    .then(user => {
+      alert(`Full name: ${user.name}.`); // (1)
+      return user;
+    })
+    .catch(err => {
+      if (err instanceof HttpError && err.response.status == 404) { // (2)
+        alert("No such user, please reenter.");
+        return demoGithubUser();
+      } else {
+        throw err;
+      }
+    });
+}
+
+demoGithubUser();
 
 
 fetch('/user.json')
@@ -8,7 +52,7 @@ fetch('/user.json')
   .then(user => fetch(`https://api.github.com/users/${user.name}`))
   .then(response => response.json())
   .then(githubUser => new Promise(function(resolve, reject) {
-    let img = document.createElement('img');
+    let img = document.createElement('img'); 
     img.src = githubUser.avatar_url;
     img.className = "promise-avatar-example";
     //document.body.append(img);
