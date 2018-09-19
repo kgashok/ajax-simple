@@ -27,26 +27,32 @@ class HttpError extends Error { // (1)
 }
 
 function demoGithubUser() {
-  let name = prompt("Enter a name?", "iliakan");
+  //let name = prompt("Enter a name?", "iliakan");
+  let name = document.getElementById('userID').value;
 
   return loadJson(`https://api.github.com/users/${name}`)
     .then(user => {
-      alert(`Full name: ${user.name}.`); // (1)
+      //alert(`Full name: ${user.name}.`); // (1)
+      $('#textTarget').append("<p>"+name + "--> " + user.name + "</p>");
+      document.getElementById("userID").focus()
+      document.getElementById("userID").select();
+
       return user;
     })
     .catch(err => {
       if (err instanceof HttpError && err.response.status == 404) { // (2)
         alert("No such user, please reenter.");
-        return demoGithubUser();
+        //return demoGithubUser();
+        document.getElementById("userID").focus();
       } else {
         throw err;
       }
     });
 }
 
-demoGithubUser();
+//demoGithubUser();
 
-
+/*
 fetch('/user.json')
   .then(response => response.json())
   .then(user => fetch(`https://api.github.com/users/${user.name}`))
@@ -65,6 +71,7 @@ fetch('/user.json')
   }))
   // triggers after 3 seconds
   .then(githubUser => alert(`Finished showing ${githubUser.name}`));
+*/
 
 /*
 // Make a request for user.json
