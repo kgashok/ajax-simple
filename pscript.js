@@ -1,5 +1,10 @@
+/* ---------------------------
+ * https://javascript.info/promise-basics
+ *
+ *
+ * --------------------------
+ */
 
-https://javascript.info/promise-basics
 console.log("Explore Promises"); 
 
 let promise = new Promise(function(resolve, reject) {
